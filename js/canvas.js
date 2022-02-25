@@ -1,4 +1,6 @@
 const COLORS = ["255,108,80", "5,117,18", "29,39,57", "67,189,81"];
+const BUBBLE_DENSITY = 100;
+
 function generateDecimalBetween(left, right) {
     return (Math.random() * (left - right) + right).toFixed(2);
   }
@@ -17,8 +19,7 @@ class Bubble {
     }
   
     init() {
-        const COLORS = ["255,108,80", "5,117,18", "29,39,57", "67,189,81"];
-        const BUBBLE_DENSITY = 100;
+             
         this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
         this.alpha = generateDecimalBetween(5, 10) / 10;
         this.size = generateDecimalBetween(1, 3);
